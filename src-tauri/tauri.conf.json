@@ -3,12 +3,14 @@
   "productName": "AppLauncher",
   "version": "1.0.0",
   "identifier": "com.example.applauncher",
+
   "build": {
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build",
     "devUrl": "http://localhost:1420",
     "frontendDist": "../dist"
   },
+
   "app": {
     "windows": [
       {
@@ -22,13 +24,16 @@
       "csp": null
     }
   },
+
   "bundle": {
     "active": true,
     "targets": [
       "nsis"
     ],
     "windows": {
-      "webviewInstallMode": "embedBootstrapper"
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      }
     }
   }
 }
